@@ -8,12 +8,12 @@
   // Traditional Staunton silhouettes: broad bases, recognisable crowns,
   // horse-head knights and mitred bishops. Kept as local SVG for reliability.
   const PIECE_ART = {
-    k: '<path d="M46 4h8v10h10v8H54v10h-8V22H36v-8h10z M50 32c-15 0-27 8-30 20-2 8 2 15 9 20l-7 7h56l-7-7c7-5 11-12 9-20-3-12-15-20-30-20z M18 78h64l8 9H10z"/><path d="M31 49c-5 6-4 13 2 18l-5 8h13c-5-8-6-16-4-25z" fill="#9b9da0" stroke="none"/>',
-    q: '<path d="M18 25l12 13 9-21 11 22 11-22 9 21 12-13-8 45H26z M17 72h66l8 14H9z"/><path d="M13 15a5 5 0 1 0 10 0 5 5 0 1 0-10 0 M44 8a5 5 0 1 0 10 0 5 5 0 1 0-10 0 M75 15a5 5 0 1 0 10 0 5 5 0 1 0-10 0"/><path d="M31 43l9-20 8 22-5 26H30z" fill="#a4a5a7" stroke="none"/>',
-    r: '<path d="M15 12h14v13h8V12h13v13h8V12h14v22H15z M25 34h50l-5 9 6 30H24l6-30z M18 73h64l8 13H10z"/><path d="M36 43h28l-3 27H33z" fill="#a3a4a6" stroke="none"/>',
-    b: '<path d="M50 7C38 19 27 32 28 45c1 11 8 17 17 21l-9 9h28l-9-9c9-4 16-10 17-21C73 32 62 19 50 7z M18 76h64l8 11H10z"/><path d="M50 17l-7 25 9 9-5 15h12l-5-19 5-12z" fill="#a2a4a6" stroke="none"/><path d="M49 15l-7 28" fill="none" stroke="#30343a" stroke-width="4"/>',
-    n: '<path d="M20 76c6-10 10-20 10-31 0-16 10-29 25-37l8 10 15 8-8 11 10 11-12 10-4 18z M18 77h64l8 10H10z"/><path d="M35 31c7-10 15-16 23-19l7 10-8 7c10 8 17 17 14 29-2 8-8 13-17 16l-23-1c8-10 11-19 10-27z" fill="#a1a3a6" stroke="none"/><path d="M37 31q5-6 12-5" fill="none" stroke="#30343a" stroke-width="4"/><circle cx="40" cy="31" r="2.8" fill="#30343a" stroke="none"/>',
-    p: '<path d="M50 12c-11 0-18 8-18 19 0 8 4 14 11 18l-7 24H64l-7-24c7-4 11-10 11-18 0-11-7-19-18-19z M20 73h60l8 14H12z"/><path d="M39 50c4 5 8 8 14 10l10 13H37l6-23z" fill="#a2a4a6" stroke="none"/>'
+    k: '<path d="M46 5h8v12h12v8H54v12h-8V25H34v-8h12z M50 37c-20 0-34 12-34 30 0 10 6 17 15 21h38c9-4 15-11 15-21 0-18-14-30-34-30z M22 82h56q8 0 10 8l2 7H10l2-7q2-8 10-8z"/><path d="M28 65c6-8 13-12 22-12s16 4 22 12c-7 2-12 6-16 13H44c-4-7-9-11-16-13z" fill="#c4c5c7" stroke="none"/>',
+    q: '<path d="M18 31l13 17 7-28 12 25 12-25 7 28 13-17-8 38H26z M22 69h56l8 10H14z M18 79h64q7 0 9 8l1 8H8l1-8q2-8 9-8z"/><circle cx="18" cy="25" r="6"/><circle cx="38" cy="14" r="6"/><circle cx="50" cy="10" r="6"/><circle cx="62" cy="14" r="6"/><circle cx="82" cy="25" r="6"/>',
+    r: '<path d="M15 12h16v13h8V12h22v13h8V12h16v27H15z M25 39h50l-5 12 5 30H25l5-30z M18 80h64q7 0 9 8l1 7H8l1-7q2-8 9-8z"/><path d="M37 48h26l-3 31H34z" fill="#c3c4c6" stroke="none"/>',
+    b: '<path d="M50 8c-7 8-22 27-22 42 0 13 8 21 19 25l-8 7h22l-8-7c11-4 19-12 19-25C72 35 57 16 50 8z M19 80h62q8 0 10 8l1 7H8l1-7q2-8 10-8z"/><path d="M50 17c-6 8-11 18-12 29 5 5 11 9 17 13-3-12-2-24 4-35z" fill="#c5c6c8" stroke="none"/><path d="M42 22l16 31" fill="none" stroke="#30343a" stroke-width="4"/>',
+    n: '<path d="M20 80c7-9 10-19 12-30 2-15 10-29 24-40l11 8 15 8-8 12 9 12-12 11-3 19z M18 80h64q7 0 9 8l1 7H8l1-7q2-8 9-8z"/><path d="M31 48c4-13 12-25 25-34l8 9-9 9c11 8 18 18 16 30-2 10-9 17-20 20H31c8-9 11-18 10-27z" fill="#c5c6c8" stroke="none"/><path d="M37 37q6-7 13-5" fill="none" stroke="#30343a" stroke-width="4"/><ellipse cx="39" cy="37" rx="3.5" ry="2.8" fill="#30343a" stroke="none"/>',
+    p: '<circle cx="50" cy="25" r="17"/><path d="M34 43h32l-4 9c4 9 12 14 19 20 6 6 8 11 8 17H11c0-6 2-11 8-17 7-6 15-11 19-20z M20 80h60q8 0 10 8l1 7H9l1-7q2-8 10-8z"/><path d="M39 52c5 9 11 15 21 21l-3 11H43l-7-18z" fill="#c5c6c8" stroke="none"/>'
   };
 
   function mount(root, options = {}) {
