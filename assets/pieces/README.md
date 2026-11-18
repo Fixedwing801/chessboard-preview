@@ -1,19 +1,13 @@
 # Extracted piece assets
 
-This branch prepares the chessboard component to load image pieces from `assets/pieces/`.
+The `pixel-extracted-piece-assets` branch includes six extracted, transparent 64px white-piece PNGs:
+- `white_pawn.png`
+- `white_king.png`
+- `white_bishop.png`
+- `white_knight.png`
+- `white_rook.png`
+- `white_queen.png`
 
-Expected files:
-- white_pawn.png
-- white_king.png
-- white_bishop.png
-- white_knight.png
-- white_rook.png
-- white_queen.png
-- black_pawn.png
-- black_king.png
-- black_bishop.png
-- black_knight.png
-- black_rook.png
-- black_queen.png
+The image loader uses these for white pieces. Black-piece PNGs are not yet included; black pieces currently fall back to the previous SVG artwork with the existing dark styling. The fallback also protects against missing image files.
 
-The loader currently falls back to the previous SVG if a file is absent. The local extraction package contains the six verified white-piece PNGs at 64px and 96px; binary transfer/deployment is still pending. Black pieces currently use the same source artwork with CSS darkening, pending separate asset work.
+These assets are a pixel-extraction pass and remain subject to visual QA at board scale before integration into the main dashboard.
