@@ -54,7 +54,7 @@
           const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");
           svg.setAttribute("viewBox","0 0 112 112");svg.setAttribute("class","cl-piece "+(piece.color==="w"?"cl-piece-white":"cl-piece-black"));
           svg.setAttribute("aria-hidden","true");svg.setAttribute("focusable","false");
-          svg.innerHTML='<defs><linearGradient id="piece-shade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff"/><stop offset=".72" stop-color="#fff"/><stop offset="1" stop-color="#d5d6d8"/></linearGradient></defs><path d="'+PIECE_ART[piece.type]+'" fill="url(#piece-shade)" fill-rule="evenodd" stroke="#34363a" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>';
+          svg.innerHTML='<defs><linearGradient id="piece-shade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff"/><stop offset=".58" stop-color="#fff"/><stop offset=".78" stop-color="#eeeeef"/><stop offset="1" stop-color="#d2d4d7"/></linearGradient></defs><path d="'+PIECE_ART[piece.type]+'" fill="url(#piece-shade)" fill-rule="evenodd" stroke="#34363a" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>';
           cell.append(svg);
         }
         cell.addEventListener("click",()=>handleSquare(square));board.append(cell);
